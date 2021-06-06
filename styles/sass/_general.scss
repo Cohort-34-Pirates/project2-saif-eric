@@ -1,0 +1,58 @@
+.wrapper {
+    max-width: 1250px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 0;
+}
+img {
+    width: 100%;
+    display: block;
+}
+h1, h2, h3, p, ul, li, a {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+
+// Header Styling
+header {
+    background-color: #8dcbdf;
+}
+.header-logo img {
+    width: 30%;
+    position: relative;
+    right: 80px;
+}
+.header-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 13%;
+}
+// Body styling
+
+.body {
+background-image: url(../assets/Wiki-background.jpg);
+height: 750px;
+}
+// Footer styling
+footer {
+    background-color: #f0ead6;
+    padding: 20px 0;
+}
+.footer-socials,
+.social-box {
+    display: flex;
+    ul {
+        display: flex;
+        a {
+            color: $orange-icon;
+        }
+    }
+    .footer-copyright {
+        align-self: end;
+        margin-left: 100px;
+    }
+}
