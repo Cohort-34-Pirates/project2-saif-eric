@@ -1,0 +1,19 @@
+
+
+
+.index .body-options {
+    display: flex;
+    // grid-template-columns: 500px 500px;
+    // grid-template-rows: auto;
+    justify-content: center;
+    img {
+        border: 3px solid black;
+        width: 70%;
+        margin: auto;
+    }
+    h2{
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>index</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="https://kit.fontawesome.com/ca23dd92c0.js" crossorigin="anonymous"></script>
 </head>
@@ -13,28 +13,31 @@
 <body class="index">
 
     <!-- Header -->
-<div class="header-wrapper">
-    <div class="header">
-        <h1>One Piece</h1>
-
+<header>
+    <div class="header-logo wrapper">
+        <img src="./assets/onepiece-logo.png" alt="One Piece logo">
     </div>
-</div>
+    <img class="header-image" src="./assets/header-background.png" alt="The Strawhat crew having a party">
+</header>
 
 
 <section class="body">
+    <h1 class="wrapper">Coo News Chapter Selector</h1>
+    
+    <div class="body-options">
+        <!-- Chapters link -->
+        <div class="chapters">
+            <h2>Chapters</h2>
+            <a href="chapters.html"><img src="assets/chapters-link.jpg" alt="picture of wanted poster of Luffy with current bounty: 1.5 billion berries"></a>
+        </div>
 
-    <!-- Chapters link -->
-    <div class="chapters">
-        <h2>Chapters</h2>
-        <a href="chapters.html"><img src="/assets/chapters-link.jpg" alt="picture of wanted poster of Luffy with current bounty: 1.5 billion berries"></a>
-    </div>
 
 
-
-    <!-- Arcs link -->
-    <div class="arcs">
-        <h2>Arcs</h2>
-        <a href="arcs.html"><img src="/assets/arcs-link.jpg" alt="picture of multiple wanted posters of strawhat pirates"></a>
+        <!-- Arcs link -->
+        <div class="arcs">
+            <h2>Arcs</h2>
+            <a href="arcs.html"><img src="assets/arcs-link.png" alt="picture of multiple wanted posters of strawhat pirates"></a>
+        </div>
     </div>
 
 </section>
@@ -43,32 +46,30 @@
     <!-- Socials and footer -->
 <footer class="footer">
 
-
-    <div class="footer-socials">
-
+    <div class="footer-socials wrapper">
 
         <!-- Erics socials -->
-    <div class="social-box">
-    <p>Eric Howell</p>
-    <ul class="eric-socials">
-        <li><i class="fab fa-github"></i></li>
-        <li><i class="fab fa-linkedin"></i></li>
-        <li></li>
-    </ul>
-    </div>
+        <div class="social-box">
+            <p>Eric Howell</p>
+            <ul class="eric-socials">
+                <li><a href="https://github.com/RixTrixx"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/eric-howell-513656b9/"><i class="fab fa-linkedin"></i></a></li>
+                <li></li>
+            </ul>
+        </div>
 
         <!-- Saifs socials -->
-    <div class="social-box">
-    <p>Saif Hussaini</p>
-    <ul class="saif-socials">
-        <li><i class="fab fa-github"></i></li>
-        <li><i class="fab fa-linkedin"></i></li>
-        <li></li>
-    </ul>
-    </div>
+        <div class="social-box">
+            <p>Saif Hussaini</p>
+            <ul class="saif-socials">
+                <li><a href="https://github.com/SSHMamba"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/saif-hussaini-04a96b202/"><i class="fab fa-linkedin"></i></a></li>
+                <li></li>
+            </ul>
+        </div>
+        <p class="footer-copyright">Created at Juno College 2021</p>
     </div>  
-    <p>Created at Juno College 2021</p>
-
+    
 </footer>
 
 
