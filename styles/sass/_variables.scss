@@ -1,1 +1,20 @@
 $orange-icon: #E75605;
+$footer-color: #f0ead6;
+$header-color: #8dcbdf;
+
+h1 {
+    font-family: 'ONE PIECE', sans-serif;
+    font-size: 65px;
+    letter-spacing: 2px;
+    color:rgb(100, 28, 28);
+}
+
+h2 {
+    font-family: 'ONE PIECE', sans-serif;
+    font-size: 95px;
+    color: #f0ead6;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 3px black;
+}
+
+$chapter-text: rgba($color: (rgb(245, 200, 245)), $alpha: 0.5)
