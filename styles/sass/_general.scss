@@ -1,3 +1,4 @@
+// Sitewide styling
 .wrapper {
     max-width: 1250px;
     width: 85%;
@@ -6,7 +7,7 @@
 }
 img {
     width: 100%;
-    display: block;
+    // display: block;
 }
 h1, h2, h3, p, ul, li, a {
     padding: 0;
@@ -19,41 +20,38 @@ li {
 // Header Styling
 header {
     background-color: #8dcbdf;
+    height: 15vh;
 }
 .header-logo img {
-    width: 30%;
+    width: 375px;
     position: relative;
-    right: 80px;
+    right: 60px;
+    height: 15vh;
 }
 .header-image {
     position: absolute;
     right: 0;
     top: 0;
-    width: 13%;
+    width: 35%;
+    height: 15vh;
 }
-// Body styling
 
+// Body styling
 .body {
 background-image: url(../assets/Wiki-background.jpg);
-height: 750px;
+height: 80vh;
 }
 // Footer styling
 footer {
     background-color: #f0ead6;
     padding: 20px 0;
+    height: 5vh;
 }
 .footer-socials,
 .social-box {
     display: flex;
-    
-    ul {
-        display: flex;
-        a {
-            color: $orange-icon;
-        }
+
+    ul:last-child {
+        margin-right: 30px;
     }
-    .footer-copyright {
-        align-self: end;
-        margin-left: 100px;
-    }
-}
+

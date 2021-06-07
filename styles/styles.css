@@ -249,6 +249,21 @@ html {
   overflow: hidden;
 }
 
+h1 {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 65px;
+  letter-spacing: 2px;
+  color: #641c1c;
+}
+
+h2 {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 95px;
+  color: #f0ead6;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 3px black;
+}
+
 .wrapper {
   max-width: 1250px;
   width: 85%;
@@ -258,7 +273,6 @@ html {
 
 img {
   width: 100%;
-  display: block;
 }
 
 h1, h2, h3, p, ul, li, a {
@@ -272,29 +286,33 @@ li {
 
 header {
   background-color: #8dcbdf;
+  height: 15vh;
 }
 
 .header-logo img {
-  width: 30%;
+  width: 375px;
   position: relative;
-  right: 80px;
+  right: 60px;
+  height: 15vh;
 }
 
 .header-image {
   position: absolute;
   right: 0;
   top: 0;
-  width: 13%;
+  width: 35%;
+  height: 15vh;
 }
 
 .body {
   background-image: url(../assets/Wiki-background.jpg);
-  height: 750px;
+  height: 80vh;
 }
 
 footer {
   background-color: #f0ead6;
   padding: 20px 0;
+  height: 5vh;
 }
 
 .footer-socials,
@@ -303,21 +321,25 @@ footer {
   display: -ms-flexbox;
   display: flex;
 }
+.footer-socials ul:last-child,
+.social-box ul:last-child {
+  margin-right: 30px;
+}
 .footer-socials ul,
 .social-box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-left: 5px;
 }
 .footer-socials ul a,
 .social-box ul a {
   color: #E75605;
+  padding: 0 5px;
 }
 .footer-socials .footer-copyright,
 .social-box .footer-copyright {
-  -ms-flex-item-align: end;
-      align-self: end;
-  margin-left: 100px;
+  margin-left: auto;
 }
 
 .index .body-options {
@@ -331,13 +353,16 @@ footer {
 .index .body-options img {
   border: 3px solid black;
   width: 70%;
-  margin: auto;
 }
 .index .body-options h2 {
   text-align: center;
   padding: 20px 0;
 }
 
+
+.box-selector {
+  text-align: center;
+=======
 .chapters-gallery {
   display: grid;
   grid-template-columns: 400px 400px;
@@ -371,4 +396,4 @@ footer {
   position: relative;
   top: 25px;
   padding: 25px;
-}
+  }
