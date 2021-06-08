@@ -1,19 +1,21 @@
 $orange-icon: #E75605;
-
-$footer-color: #f0ead6;
+$eggshell-color: #f0ead6;
 $header-color: #8dcbdf;
+$title-color: rgb(100, 28, 28);
+$summary-bubble: rgba($color: (rgb(245, 200, 245)), $alpha: 0.5);
 
-h1 {
+
+@mixin h1 {
     font-family: 'ONE PIECE', sans-serif;
-    font-size: 65px;
+    font-size: 55px;
     letter-spacing: 2px;
-    color:rgb(100, 28, 28);
+    color: $title-color;
 }
 
-h2 {
+@mixin h2 {
     font-family: 'ONE PIECE', sans-serif;
-    font-size: 95px;
-    color: #f0ead6;
+    font-size: 85px;
+    color: $eggshell-color;
     letter-spacing: 3px;
     -webkit-text-stroke: 3px black;
 }

@@ -7,7 +7,6 @@
 }
 img {
     width: 100%;
-    // display: block;
 }
 h1, h2, h3, p, ul, li, a {
     padding: 0;
@@ -16,16 +15,32 @@ h1, h2, h3, p, ul, li, a {
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+}
 
 // Header Styling
 header {
-    background-color: #8dcbdf;
+    background-color: $header-color;
     height: 15vh;
+    position: relative;
+}
+.header-logo {
+    display: flex;
+}   nav ul {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    margin-left: -50px;
+    li {
+        margin-right: 20px;
+    }
 }
 .header-logo img {
     width: 375px;
     position: relative;
-    right: 60px;
+    right: 43px;
     height: 15vh;
 }
 .header-image {
@@ -41,17 +56,42 @@ header {
 background-image: url(../assets/Wiki-background.jpg);
 height: 80vh;
 }
+h1 {
+    @include h1;
+}
+h2 {
+    @include h2;
+}
+
+
 // Footer styling
 footer {
-    background-color: #f0ead6;
-    padding: 20px 0;
+    background-color: $eggshell-color;
     height: 5vh;
 }
-.footer-socials,
+.footer-socials {
+    display: flex;
+    padding-top: 20px;
+}
 .social-box {
     display: flex;
-
+    p, a {
+        font-size: 20px;
+    }
+    ul {
+        display: flex;
+        margin-left: 5px;
+    }
     ul:last-child {
         margin-right: 30px;
+        li {
+            padding-left: 10px;
+            a {
+                color: $orange-icon;
+            }
+        }
     }
-
+}
+.footer-copyright {
+    margin-left: auto;
+}
