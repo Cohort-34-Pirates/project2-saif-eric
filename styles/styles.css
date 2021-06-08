@@ -269,15 +269,39 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   background-color: #8dcbdf;
   height: 15vh;
+  position: relative;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  font-size: 15px;
+  margin-left: -50px;
+}
+nav ul li {
+  margin-right: 20px;
 }
 
 .header-logo img {
   width: 375px;
   position: relative;
-  right: 60px;
+  right: 43px;
   height: 15vh;
 }
 
@@ -294,24 +318,67 @@ header {
   height: 80vh;
 }
 
+h1 {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 55px;
+  letter-spacing: 2px;
+  color: #641c1c;
+}
+
+h2 {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 85px;
+  color: #f0ead6;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 3px black;
+}
+
 footer {
   background-color: #f0ead6;
-  padding: 20px 0;
   height: 5vh;
 }
 
-.footer-socials,
+.footer-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
 .social-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.footer-socials ul:last-child,
+.social-box p, .social-box a {
+  font-size: 20px;
+}
+
+.social-box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+}
 .social-box ul:last-child {
   margin-right: 30px;
 }
+.social-box ul:last-child li {
+  padding-left: 10px;
+}
+.social-box ul:last-child li a {
+  color: #E75605;
+}
 
-.index .body-options {
+.footer-copyright {
+  margin-left: auto;
+}
+
+.body h1 {
+  padding-top: 15px;
+}
+
+.body-options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,13 +386,24 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.index .body-options img {
+.body-options img {
   border: 3px solid black;
-  width: 70%;
+  width: 60%;
 }
-.index .body-options h2 {
+.body-options h2 {
   text-align: center;
-  padding: 20px 0;
+  padding: 10px 0;
+}
+.body-options ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.body-options ul li {
+  width: 40%;
 }
 
 .box-selector {
