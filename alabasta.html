@@ -19,39 +19,50 @@
     </header>
 
     <!-- Scrollable menu -->
-    <aside class="arc-menu">
-        <form action="">
-            <fieldset>
-                <label for="alabasta-menu">
-                    Alabasta Chapters
-                </label>
-                <select name="chapters-menu" id="">
-                    <option value="">101-110</option>
-                    <option value="">111-120</option>
-                    <option value="">121-130</option>
-                    <option value="">131-140</option>
-                    <option value="">141-150</option>
-                    <option value="">151-160</option>
-                    <option value="">161-170</option>
-                    <option value="">171-180</option>
-                    <option value="">181-190</option>
-                    <option value="">191-200</option>
-                    <option value="">201-210</option>
-                    <option value="">211-217</option>
-                </select>
-            </fieldset>
-        </form>
-    </aside>
+    <div class="container">
+        <div class="post">
+            <h2 class="post-title">
+    
+                <form action="">
+                    <fieldset>
+    
+                        <label for="chapters-menu">
+                            <p>Chapters Menu</p>
+                        </label>
+    
+                        <select name="chapters-scroll-menu" id="">
+                            <option value="">111-120</option>
+                            <option value="">121-130</option>
+                            <option value="">131-140</option>
+                            <option value="">141-150</option>
+                            <option value="">151-160</option>
+                            <option value="">161-170</option>
+                            <option value="">171-180</option>
+                            <option value="">181-190</option>
+                            <option value="">191-200</option>
+                            <option value="">201-210</option>
+                            <option value="">211-217</option>
+                        </select>
+    
+                    </fieldset>
+                </form>
+    
+    
+            </h2>
+        </div>
+    </div>
 
     <!-- Chapters carousel -->
     <section class="chapters-carousel body">
         <div class="chapters-gallery">
+        <button class="previous"><</button>
             <img src="" alt="">
             <p class="chapter-title">Chapter One</p>
             <p class="chapter-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe cum,
                 eligendi,
                 corporis eum iusto voluptatem praesentium voluptate suscipit quis facere dolore, deserunt consequuntur
                 deleniti vitae!</p>
+        <button class="next">></button>
         </div>
 
     </section>
