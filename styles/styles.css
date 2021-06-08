@@ -405,6 +405,9 @@ footer {
 .body-options ul li {
   width: 40%;
 }
+.body-options ul li img {
+  width: 80%;
+}
 
 .box-selector {
   text-align: center;
