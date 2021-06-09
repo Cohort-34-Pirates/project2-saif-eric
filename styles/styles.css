@@ -353,7 +353,6 @@ footer {
 .social-box p, .social-box a {
   font-size: 20px;
 }
-
 .social-box ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,11 +413,11 @@ footer {
 }
 
 .chapters-gallery {
-  width: 100%;
+  width: 60%;
+  margin: 0 auto;
   position: relative;
   display: grid;
-  grid-template-columns: 50px 600px 600px 50px;
-  grid-template-rows: 50px 400px 400px 50px;
+  grid-template-columns: 25vw 25vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -430,8 +429,11 @@ footer {
 }
 
 .chapters-gallery img {
-  grid-column-start: 2;
+  padding-top: 60px;
+  grid-column-start: 1;
   display: block;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .previous,
@@ -443,7 +445,7 @@ footer {
   font-weight: 700;
   color: white;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   top: 400px;
   -webkit-box-shadow: 0 7px 3px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0 7px 3px 0px rgba(0, 0, 0, 0.25);
@@ -463,27 +465,25 @@ footer {
 }
 
 .previous {
-  grid-row-start: 1;
-  grid-column-start: 1;
-  position: relative;
-  right: 55px;
+  position: absolute;
+  left: 200px;
 }
 
 .next {
-  grid-column-start: 4;
+  position: absolute;
+  right: 300px;
 }
 
 .chapter-description {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
-  grid-column-start: 3;
-  grid-row-start: 2;
+  grid-column-start: 2;
   position: relative;
-  top: 200px;
+  bottom: 25vh;
   padding: 25px;
   left: 50px;
   width: 450px;
-  background: rgba(233, 157, 87, 0.5);
+  background: rgba(245, 200, 245, 0.5);
   border: 2px dotted black;
   letter-spacing: 1.5px;
   line-height: 25px;
@@ -494,8 +494,7 @@ footer {
   font-family: "ONE PIECE", sans-serif;
   left: 50px;
   font-size: 5rem;
-  grid-row-start: 2;
-  grid-column-start: 3;
+  grid-column-start: 2;
   position: relative;
   top: 25px;
   padding: 25px;
@@ -526,7 +525,7 @@ body {
 }
 
 .container {
-  background-image: url(/assets/Wiki-background.jpg);
+  background-image: url(../assets/Wiki-background.jpg);
   position: relative;
 }
 
@@ -536,7 +535,7 @@ body {
   max-width: 350px;
   position: relative;
   padding: 1rem;
-  background-image: url(/assets/Wiki-background.jpg);
+  background-image: url(../assets/Wiki-background.jpg);
 }
 .post:before {
   position: absolute;

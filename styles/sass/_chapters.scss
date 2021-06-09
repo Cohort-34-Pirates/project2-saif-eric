@@ -2,11 +2,12 @@
 
 
 .chapters-gallery {
-    width: 100%;
+    width: 60%;
+    margin: 0 auto;
     position: relative;
     display: grid;
-    grid-template-columns: 50px 600px 600px 50px;
-    grid-template-rows: 50px 400px 400px 50px;
+    grid-template-columns: 25vw 25vw;
+    // grid-template-rows: 1fr 1fr;
     justify-content: center;
     padding: 35px;
     flex-wrap: wrap;
@@ -16,8 +17,11 @@
 }
 
 .chapters-gallery img{
-    grid-column-start: 2;
+    padding-top: 60px;
+    grid-column-start: 1;
     display: block;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .previous,
@@ -29,7 +33,7 @@
     font-weight: 700;
     color:white;
     cursor: pointer;
-    position: relative;
+    position: absolute;
     top: 400px;
     box-shadow:0 7px 3px 0px rgba(0,0,0,0.25);
     transition:.2s all;
@@ -45,14 +49,14 @@ transform:scale(1);
 
 
 .previous {
-    grid-row-start: 1;
-    grid-column-start: 1;
-    position: relative;
-    right: 55px;
+    position: absolute;
+    left: 200px;
+
 }
 
 .next {
-    grid-column-start: 4;
+    position: absolute;
+    right: 300px;
 
 }
 
@@ -60,10 +64,9 @@ transform:scale(1);
 .chapter-description {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    grid-column-start: 3;
-    grid-row-start: 2;
+    grid-column-start: 2;
     position: relative;
-    top: 200px;
+    bottom: 25vh;
     padding: 25px;
     left: 50px;
     width: 450px;
@@ -79,8 +82,7 @@ transform:scale(1);
     font-family: 'ONE PIECE', sans-serif;
     left: 50px;
     font-size: 5rem;
-    grid-row-start: 2;
-    grid-column-start: 3;
+    grid-column-start: 2;
     position: relative;
     top: 25px;
     padding: 25px;
@@ -120,10 +122,8 @@ body {
 	background-color: #f2f5f7;
 }
 
-// End Codepen spesific styling
-
 .container {
-    background-image: url(/assets/Wiki-background.jpg);
+    background-image: url(../assets/Wiki-background.jpg);
     position: relative;
 }
 
@@ -133,8 +133,7 @@ body {
 	max-width: 350px;
 	position: relative;
 	padding: 1rem;
-	// box-shadow: inset 0 0 0 4px #000, inset -4px -4px 0 6px #CCC;
-	background-image: url(/assets/Wiki-background.jpg);
+	background-image: url(../assets/Wiki-background.jpg);
 	&:before {
 		position: absolute; 
 		left: 0;
