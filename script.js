@@ -8,7 +8,7 @@ pieceApp.getChapters = function(){
 
     url.search = new URLSearchParams({
         reqUrl: proxiedUrl
-})  
+    })  
 
 
 async function onePieceChapters(id) {
@@ -17,45 +17,44 @@ async function onePieceChapters(id) {
         return data;
     }
     const mangaChapters = [];
-    // console log to see the 40 pokemon in an array
-    // console.log(pokeBag)
 
-    for (let i = 1; i <= 20; i++) {
+
+    for (let i = 1; i <= 217; i++) {
         mangaChapters.push( onePieceChapters(i) );
     }
 
     Promise.all(mangaChapters)
         .then(data => {
-            data.forEach(chapter => {
-                
-
-            })
-            pieceApp.displayChapter(chapter);
+        
+                pieceApp.displayChapter(data);
+            
         })
-
- }
+}
 
 pieceApp.displayChapter = function(arrayOfChapters) {
-    const clearHTML = document.querySelector('.chapters-gallery')
-    clearHTML.innerHTML = "";
-    arrayOfChapters.forEach(page => {
-        const title = document.querySelector('h2');
-        title.innerText = page.chapter;
+    // const clearHTML = document.querySelector('.chapters-gallery')
+    // clearHTML.innerHTML = "";
+    
 
-        const summary = document.querySelector('p');
+    arrayOfChapters.forEach(page => {
+        
+        const title = document.querySelector('.chapter-title');
+        title.innerHTML = page.chapter
+        
+        const summary = document.querySelector('.chapter-description');
         summary.innerText = page.summary;
 
-        const chapterImage = document.querySelector('img');
-        image.alt = page.description;
-        image.src = page.cover_images.split('|');
+        const chapterImage = document.querySelector('.api-img');
+        chapterImage.alt = page.explanation;
+        chapterImage.src = page.cover_images.split('|')[0]
 
-        console.log();
-
-    })
+        // const wholePage = document.querySelector('.chapters-gallery');
+        // arrayOfChapters.push(wholePage)
+    });
 }
 
 pieceApp.init = function() {
-    pieceApp.getChapters();
+    pieceApp.getChapters()
 }
 
 pieceApp.init();
