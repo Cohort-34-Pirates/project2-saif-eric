@@ -1,8 +1,8 @@
 const pieceApp = {};
 
 pieceApp.getChapters = function(){
-
-    let proxiedUrl = "https://onepiececover.com/api/chapters/"
+    
+    let proxiedUrl = `https://onepiececover.com/api/chapters/${pieceApp.currentChapter}`
 
     const url = new URL('http://proxy.hackeryou.com');
 
@@ -11,50 +11,53 @@ pieceApp.getChapters = function(){
     })  
 
 
-async function onePieceChapters(id) {
-        const response = await fetch(`${url}${id}`)
-        const data = await response.json();
-        return data;
-    }
-    const mangaChapters = [];
-
-
-    for (let i = 1; i <= 217; i++) {
-        mangaChapters.push( onePieceChapters(i) );
-    }
-
-    Promise.all(mangaChapters)
-        .then(data => {
-        
-                pieceApp.displayChapter(data);
-            
+fetch(url)
+        .then (data => {
+            return data.json();
         })
-}
+        .then(jsonData => {
+            pieceApp.displayChapter(jsonData)
+        })
+    }
 
-pieceApp.displayChapter = function(arrayOfChapters) {
-    // const clearHTML = document.querySelector('.chapters-gallery')
-    // clearHTML.innerHTML = "";
-    
 
-    arrayOfChapters.forEach(page => {
+pieceApp.displayChapter = function (arrayOfChapters) {
         
         const title = document.querySelector('.chapter-title');
-        title.innerHTML = page.chapter
+        title.innerText = arrayOfChapters.chapter
         
+
         const summary = document.querySelector('.chapter-description');
-        summary.innerText = page.summary;
+        summary.innerText = arrayOfChapters.summary;
 
         const chapterImage = document.querySelector('.api-img');
-        chapterImage.alt = page.explanation;
-        chapterImage.src = page.cover_images.split('|')[0]
+        chapterImage.alt = arrayOfChapters.explanation;
+        chapterImage.src = arrayOfChapters.cover_images.split('|')[0]
 
-        // const wholePage = document.querySelector('.chapters-gallery');
-        // arrayOfChapters.push(wholePage)
-    });
+        
 }
 
+
+pieceApp.changeChapter = function() {
+    const next = document.querySelector('.next');
+    next.addEventListener('click', function () {
+        
+    pieceApp.currentChapter = pieceApp.currentChapter + 1;
+    pieceApp.getChapters(pieceApp.currentChapter);
+})
+    const previous = document.querySelector('.previous');
+    previous.addEventListener('click', function() {
+
+    pieceApp.currentChapter = pieceApp.currentChapter - 1;
+    pieceApp.getChapters(pieceApp.currentChapter);
+    })
+}
+
+
 pieceApp.init = function() {
-    pieceApp.getChapters()
+    pieceApp.currentChapter = 1
+    pieceApp.getChapters(pieceApp.currentChapter)
+    pieceApp.changeChapter();
 }
 
 pieceApp.init();
