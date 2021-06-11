@@ -1,0 +1,18 @@
+.arcs-body .body-options{
+    display: flex;
+        ul {
+        display: flex;
+        flex-wrap: wrap;
+        h2 {
+            font-size: 50px;
+            -webkit-text-stroke: 2px black;
+        }
+        li {
+            width: 20%;
+            img {
+                width: 55%;
+            }
+        }
+    }
+}
+        
