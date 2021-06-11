@@ -1,10 +1,12 @@
-// Body Styling
+
 .chapters-gallery {
     width: 60%;
     margin: 0 auto;
     position: relative;
-    display: grid;
-    grid-template-columns: 25vw 25vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 35px;
     flex-wrap: wrap;
@@ -12,37 +14,69 @@
     background: rgba($color: #e99d57, $alpha: 0.5);
     
 }
+
 .chapters-gallery img{
-    padding-top: 60px;
-    grid-column-start: 1;
+    padding-top: 25px;
     display: block;
-    width: 60%;
+    width:20%;
     margin: 0 auto;
 }
+
+
+.previous,
+.next {
+    background: #8dcbdf;
+    border: 3px solid yellow;
+    font-size: 35px;
+    font-weight: 700;
+    color:white;
+    cursor: pointer;
+    position: absolute;
+    box-shadow:0 7px 3px 0px rgba(0,0,0,0.25);
+    transition:.2s all;
+}
+.previous:hover,
+.next:hover {
+transform:scale(1);
+  opacity:1;
+  box-shadow:0 8px 20px 5px rgba(0,0,0,0.125);
+  font-size: 38px;
+  color: #e99d57;
+}
+
+
+
+
 .chapter-description {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    grid-column-start: 2;
     position: relative;
-    bottom: 25vh;
     padding: 25px;
-    left: 50px;
-    width: 450px;
-    background: $summary-bubble;
+    margin: 0 auto;
+    width: 50%;
+    // add partial to background
+    background:rgba($color: #f0ceaf, $alpha: 0.9);
     border: 2px dotted black;
     letter-spacing: 1.5px;
     line-height: 25px;
     border-radius: 5%;
+ 
 }
+
 .chapter-title {
     font-family: 'ONE PIECE', sans-serif;
-    left: 50px;
     font-size: 5rem;
-    grid-column-start: 2;
     position: relative;
-    top: 25px;
     padding: 25px;
 }
+
+.chapter-name {
+    font-family: 'ONE PIECE', sans-serif;
+    font-size: 3rem;
+    position: relative;
+    padding-bottom: 20px;
+}
+
 
 
 // Arrow Styling
@@ -50,13 +84,14 @@
 .next {
     background: #8dcbdf;
     border: 3px solid yellow;
-    border-radius: 50%;
-    font-size: 35px;
+    width: 15%;
+    margin: 0 auto;
+    font-size: 25px;
     font-weight: 700;
+    position: relative;
+    margin-bottom: 5px;
     color:white;
     cursor: pointer;
-    position: absolute;
-    top: 400px;
     box-shadow:0 7px 3px 0px rgba(0,0,0,0.25);
     transition:.2s all;
 }
@@ -65,18 +100,8 @@
     transform:scale(1);
     opacity:1;
     box-shadow:0 8px 20px 5px rgba(0,0,0,0.125);
-    font-size: 38px;
+    font-size: 28px;
     color: #e99d57;
-}
-.previous {
-    position: absolute;
-    left: 200px;
-
-}
-.next {
-    position: absolute;
-    right: 300px;
-
 }
 
 

@@ -25,6 +25,9 @@ pieceApp.displayChapter = function (arrayOfChapters) {
         
         const title = document.querySelector('.chapter-title');
         title.innerText = arrayOfChapters.chapter
+
+        const chapterName = document.querySelector('.chapter-name');
+        chapterName.innerText = arrayOfChapters.title
         
 
         const summary = document.querySelector('.chapter-description');
@@ -46,13 +49,13 @@ pieceApp.changeChapter = function() {
     pieceApp.getChapters(pieceApp.currentChapter);
 })
     const previous = document.querySelector('.previous');
-    previous.addEventListener('click', function() {
-
+    previous.addEventListener('click', function() { 
+        if (pieceApp.currentChapter !== 1){
     pieceApp.currentChapter = pieceApp.currentChapter - 1;
     pieceApp.getChapters(pieceApp.currentChapter);
+     }
     })
 }
-
 
 pieceApp.init = function() {
     pieceApp.currentChapter = 1
