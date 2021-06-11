@@ -277,6 +277,10 @@ header {
   background-color: #8dcbdf;
   height: 15vh;
   position: relative;
+  background-image: url(/assets/header-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 }
 
 .header-logo {
@@ -291,18 +295,29 @@ nav ul {
   display: flex;
   position: absolute;
   bottom: 0;
-  font-size: 15px;
   margin-left: -50px;
 }
 nav ul li {
   margin-right: 20px;
+  border: 10px solid orange;
+  background: orange;
+  font-size: 2rem;
+  -webkit-transform: box-shadow;
+          transform: box-shadow;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+nav ul li:hover {
+  background: red;
+  -webkit-box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.125);
 }
 
 .header-logo img {
-  width: 375px;
+  width: 700px;
   position: relative;
-  right: 43px;
-  height: 15vh;
+  right: 243px;
+  height: 300px;
 }
 
 .header-image {
@@ -310,7 +325,6 @@ nav ul li {
   right: 0;
   top: 0;
   width: 35%;
-  height: 15vh;
 }
 
 .body {
@@ -331,6 +345,18 @@ h2 {
   color: #f0ead6;
   letter-spacing: 3px;
   -webkit-text-stroke: 3px black;
+}
+
+.box-selector img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.box-selector img:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  -webkit-box-shadow: 0 17px 13px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 17px 13px 0px rgba(0, 0, 0, 0.25);
 }
 
 footer {
@@ -416,63 +442,41 @@ footer {
   width: 60%;
   margin: 0 auto;
   position: relative;
-  display: grid;
-  grid-template-columns: 25vw 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 35px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   border: 5px dashed black;
   background: rgba(233, 157, 87, 0.5);
 }
 
 .chapters-gallery img {
-  padding-top: 60px;
-  grid-column-start: 1;
+  padding-top: 25px;
   display: block;
-  width: 60%;
+  width: 20%;
   margin: 0 auto;
-}
-
-.chapter-description {
-  font-family: "Roboto", sans-serif;
-  font-size: 20px;
-  grid-column-start: 2;
-  position: relative;
-  bottom: 25vh;
-  padding: 25px;
-  left: 50px;
-  width: 450px;
-  background: rgba(245, 200, 245, 0.5);
-  border: 2px dotted black;
-  letter-spacing: 1.5px;
-  line-height: 25px;
-  border-radius: 5%;
-}
-
-.chapter-title {
-  font-family: "ONE PIECE", sans-serif;
-  left: 50px;
-  font-size: 5rem;
-  grid-column-start: 2;
-  position: relative;
-  top: 25px;
-  padding: 25px;
 }
 
 .previous,
 .next {
   background: #8dcbdf;
   border: 3px solid yellow;
-  border-radius: 50%;
   font-size: 35px;
   font-weight: 700;
   color: white;
   cursor: pointer;
   position: absolute;
-  top: 400px;
   -webkit-box-shadow: 0 7px 3px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0 7px 3px 0px rgba(0, 0, 0, 0.25);
   -webkit-transition: 0.2s all;
@@ -490,14 +494,61 @@ footer {
   color: #e99d57;
 }
 
-.previous {
-  position: absolute;
-  left: 200px;
+.chapter-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  position: relative;
+  padding: 25px;
+  margin: 0 auto;
+  width: 50%;
+  background: rgba(240, 206, 175, 0.9);
+  border: 2px dotted black;
+  letter-spacing: 1.5px;
+  line-height: 25px;
+  border-radius: 5%;
 }
 
+.chapter-title {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 5rem;
+  position: relative;
+  padding: 25px;
+}
+
+.chapter-name {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 3rem;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.previous,
 .next {
-  position: absolute;
-  right: 300px;
+  background: #8dcbdf;
+  border: 3px solid yellow;
+  width: 15%;
+  margin: 0 auto;
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 5px;
+  color: white;
+  cursor: pointer;
+  -webkit-box-shadow: 0 7px 3px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 7px 3px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.previous:hover,
+.next:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  -webkit-box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: 0 8px 20px 5px rgba(0, 0, 0, 0.125);
+  font-size: 28px;
+  color: #e99d57;
 }
 
 .menu-container {
