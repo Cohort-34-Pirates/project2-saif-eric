@@ -58,7 +58,7 @@ pieceApp.changeChapter = function() {
 
 
 pieceApp.init = function() {
-    pieceApp.currentChapter = 5
+    pieceApp.currentChapter = 1
     pieceApp.getChapters(pieceApp.currentChapter)
     pieceApp.changeChapter();
 }

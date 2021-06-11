@@ -32,7 +32,7 @@ header {
     background-color: $header-color;
     height: 15vh;
     position: relative;
-    background-image: url(/assets/header-background.png);
+    background-image: url(../assets/header-background.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:right;
@@ -46,23 +46,30 @@ header {
     margin-left: -50px;
     li {
         margin-right: 20px;
-        border: 10px solid orange;
-        background: orange;
+        font-family: 'ONE PIECE', sans-serif;
         font-size: 2rem;
         transform: box-shadow;
-        transition: 0.5s ease-in;
+        transition: 0.3s ease-in;
     }
     li:hover{
-        background: red;
-        box-shadow: 0 8px 20px 5px rgba(0,0,0,0.125);
+        border-bottom: 5px solid orange;
+        box-shadow: 0 8px 20px 0px rgba(0,0,0,0.125);
         
+    }
+    li a {
+        font-size: 50px;
+        font-weight: 700;
+        color: $title-color;
+    }
+    li a:visited {
+        color: $title-color;
     }
 }
 .header-logo img {
-    width: 700px;
+    width: 50%;
     position: relative;
     right: 243px;
-    height: 300px;
+    height: 15vh;
 }
 .header-image {
     position: absolute;
@@ -70,8 +77,6 @@ header {
     top:0;
     width: 35%;
 }
-
-
 
 // Body styling
 .body {
@@ -107,6 +112,7 @@ audio {
 // Footer styling
 footer {
     background-color: $eggshell-color;
+    background-image: linear-gradient(180deg, whitesmoke, $eggshell-color 85%);
     height: 5vh;
 }
 .footer-socials {
@@ -116,7 +122,7 @@ footer {
 .social-box {
     display: flex;
     p, a {
-        font-size: 20px;
+        font-size: 25px;
     }
     ul {
         display: flex;
@@ -128,6 +134,9 @@ footer {
             padding-left: 10px;
             a {
                 color: $orange-icon;
+            }
+            a:hover {
+                color: rebeccapurple;
             }
         }
     }
