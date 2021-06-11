@@ -1,4 +1,4 @@
-// Sitewide styling
+// Sitewide/General styling
 .wrapper {
     max-width: 1250px;
     width: 85%;
@@ -17,6 +17,14 @@ li {
 }
 a {
     text-decoration: none;
+}
+
+// Nav Styling
+nav ul li a {
+    font-size: 20px;
+}
+nav ul li a:hover{
+    color: yellow;
 }
 
 // Header Styling
@@ -75,6 +83,13 @@ h1 {
 }
 h2 {
     @include h2;
+}
+audio {
+    position: absolute;
+    right: 0;
+}
+.box-selector {
+    text-align: center;
 }
 
 .box-selector img {

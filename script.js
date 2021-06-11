@@ -35,9 +35,7 @@ pieceApp.displayChapter = function (arrayOfChapters) {
 
         const chapterImage = document.querySelector('.api-img');
         chapterImage.alt = arrayOfChapters.explanation;
-        chapterImage.src = arrayOfChapters.cover_images.split('|')[0]
-
-        
+        chapterImage.src = arrayOfChapters.cover_images.split('|')[0] 
 }
 
 
@@ -57,8 +55,10 @@ pieceApp.changeChapter = function() {
     })
 }
 
+
+
 pieceApp.init = function() {
-    pieceApp.currentChapter = 1
+    pieceApp.currentChapter = 5
     pieceApp.getChapters(pieceApp.currentChapter)
     pieceApp.changeChapter();
 }
