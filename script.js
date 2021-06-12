@@ -48,14 +48,27 @@ pieceApp.changeChapter = function() {
 })
     const previous = document.querySelector('.previous');
     previous.addEventListener('click', function() { 
+        
         if (pieceApp.currentChapter !== 1){
-    pieceApp.currentChapter = pieceApp.currentChapter - 1;
-    pieceApp.getChapters(pieceApp.currentChapter);
-     }
+        pieceApp.currentChapter = pieceApp.currentChapter - 1;
+        pieceApp.getChapters(pieceApp.currentChapter);
+        }
     })
 }
 
+const chSelectors = document.querySelector('#chapter-selection')
 
+chSelectors.addEventListener("change", function (event) {
+    event.preventDefault
+    const selection = this.value
+
+    pieceApp.init = function () {
+        pieceApp.currentChapter = selection
+        pieceApp.getChapters(pieceApp.currentChapter)
+        pieceApp.changeChapter();
+    }
+    pieceApp.init();
+})
 
 pieceApp.init = function() {
     pieceApp.currentChapter = 1
@@ -64,3 +77,4 @@ pieceApp.init = function() {
 }
 
 pieceApp.init();
+

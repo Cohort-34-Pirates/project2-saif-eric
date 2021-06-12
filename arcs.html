@@ -24,12 +24,45 @@
         </div>
     </header>
 
-    <!-- Arcs list -->
-    <section class="arcs-list body">
-
+    <!-- Scrollable menu -->
+    <div class="menu-container" id="arc-menu">
+    
         <audio controls loop>
             <source src="./assets/One Piece - AMV - We Are! (Full Song) (320 kbps).mp3">
         </audio>
+    
+        <div class="post">
+            <div class="post-title">
+    
+                <form action="">
+                    <fieldset>
+    
+                        <label for="chapters-menu">
+                            <p>Arc Menu</p>
+                        </label>
+    
+                        <select name="chapters-scroll-menu" id="arc-selection">
+                            <option value="1">East Blue</option>
+                            <option value="101">Alabasta</option>
+                            <option value="218">Skypia</option>
+                            <option value="303">Water 7</option>
+                            <option value="442">Thriller Bark</option>
+                            <option value="490">Paramount War</option>
+                            <option value="598">Fishman Island</option>
+                            <option value="654">Dressrosa</option>
+                            <option value="802">WholeCake</option>
+                            <option value="903">Wano Kuni</option>
+                        </select>
+    
+                    </fieldset>
+                </form>
+    
+            </div>
+        </div>
+    </div>
+
+    <!-- Arcs list -->
+    <section class="arcs-list body">
 
         <h1 class="wrapper">Select Arc</h1>
         <div class="body-options">
@@ -95,6 +128,7 @@
             </ul>
         </div>
     </section>
+
     <!-- Chapters carousel -->
     <section class="chapters-carousel body" id="hide-chapters">
         <div class="chapters-gallery">
@@ -138,7 +172,8 @@
 
     </footer>
 
+<!-- <script></script> -->
 <script src="arcspage.js"></script>
-<!-- <script src="script.js"></script> -->
+
 </body>
 </html>

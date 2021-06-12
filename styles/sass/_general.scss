@@ -51,7 +51,8 @@ header {
         transform: box-shadow;
         transition: 0.3s ease-in;
     }
-    li:hover{
+    li a:hover{
+        color: yellow;
         border-bottom: 5px solid orange;
         box-shadow: 0 8px 20px 0px rgba(0,0,0,0.125);
         
@@ -59,9 +60,6 @@ header {
     li a {
         font-size: 50px;
         font-weight: 700;
-        color: $title-color;
-    }
-    li a:visited {
         color: $title-color;
     }
 }
@@ -79,9 +77,11 @@ header {
 }
 
 // Body styling
+body {
+    background-color:$eggshell-color;
+}
 .body {
 background-image: url(../assets/Wiki-background.jpg);
-height: 80vh;
 }
 h1 {
     @include h1;
@@ -96,11 +96,9 @@ audio {
 .box-selector {
     text-align: center;
 }
-
 .box-selector img {
     transition: 0.5s;
 }
-
 .box-selector img:hover{
     transform: scale(1.06);
     box-shadow:0 17px 13px 0px rgba(0,0,0,0.25);
@@ -111,8 +109,8 @@ audio {
 
 // Footer styling
 footer {
-    background-color: $eggshell-color;
-    background-image: linear-gradient(180deg, whitesmoke, $eggshell-color 85%);
+    // background-color: $eggshell-color;
+    background: linear-gradient(#ffff #9198e5);
     height: 5vh;
 }
 .footer-socials {
