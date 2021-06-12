@@ -56,24 +56,24 @@ pieceApp.changeChapter = function() {
     })
 }
 
-const chSelectors = document.querySelector('#chapter-selection')
 
-chSelectors.addEventListener("change", function (event) {
-    event.preventDefault
-    const selection = this.value
+pieceApp.menu = function() {
+    const chSelectors = document.querySelector('#chapter-selection')
 
-    pieceApp.init = function () {
-        pieceApp.currentChapter = selection
+    chSelectors.addEventListener("change", function (event) {
+        event.preventDefault
+        const selection = this.value
+
+        pieceApp.currentChapter = 1 * selection
         pieceApp.getChapters(pieceApp.currentChapter)
-        pieceApp.changeChapter();
-    }
-    pieceApp.init();
-})
+    })
+}
 
 pieceApp.init = function() {
     pieceApp.currentChapter = 1
     pieceApp.getChapters(pieceApp.currentChapter)
     pieceApp.changeChapter();
+    pieceApp.menu()
 }
 
 pieceApp.init();

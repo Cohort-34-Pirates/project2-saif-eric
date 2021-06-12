@@ -75,21 +75,23 @@ const ninthArc = document.querySelector('#arc-9');
 const tenthArc = document.querySelector('#arc-10');
 
 
-
-
-
-
-    arcSelectors.addEventListener("change", function (event)  {
+pieceApp.menu = function() {
+    arcSelectors.addEventListener("change", function (event) {
         event.preventDefault
         const selection = this.value
-
-        pieceApp.init = function () {
-            pieceApp.currentChapter = selection
-            pieceApp.getChapters(pieceApp.currentChapter)
-            pieceApp.changeChapter();
-        }
-        pieceApp.init();
+        pieceApp.currentChapter = 1 * selection
+        pieceApp.getChapters(pieceApp.currentChapter)
     })
+}
+
+pieceApp.init = function () {
+    pieceApp.currentChapter = 1
+    pieceApp.getChapters(pieceApp.currentChapter)
+    pieceApp.changeChapter();
+    pieceApp.menu()
+}
+
+pieceApp.init();
 
 
 
@@ -97,7 +99,6 @@ function hideChapters() {
     chapterGallery.style.display = "none";
     arcMenu.style.display ="none"
 }
-
 hideChapters();
 
 
@@ -106,19 +107,14 @@ function showChapters() {
     arcMenu.style.display = "block";
 }
 
+
 firstArc.addEventListener("click", (event) => {
     event.preventDefault();
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 1
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-
 })
 
 
@@ -127,14 +123,8 @@ secondArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 101
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-    
 })
 
 thirdArc.addEventListener("click", (event) => {
@@ -142,14 +132,8 @@ thirdArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 218
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-
 })
 
 
@@ -158,14 +142,8 @@ fourthArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 303
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-    
 })
 
 fifthArc.addEventListener("click", (event) => {
@@ -173,14 +151,8 @@ fifthArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 442
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-
 })
 
 
@@ -189,13 +161,8 @@ sixthArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 490
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
     
 })
 
@@ -204,14 +171,8 @@ seventhArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 598
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-
 })
 
 
@@ -220,14 +181,8 @@ eighthArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 654
-    pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-    
+    pieceApp.getChapters(pieceApp.currentChapter) 
 })
 
 ninthArc.addEventListener("click", (event) => {
@@ -235,14 +190,8 @@ ninthArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 802
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-
 })
 
 
@@ -251,12 +200,6 @@ tenthArc.addEventListener("click", (event) => {
     showChapters();
     boxes.style.display = "none";
 
-    pieceApp.init = function() {
     pieceApp.currentChapter = 903
     pieceApp.getChapters(pieceApp.currentChapter)
-    pieceApp.changeChapter();
-    }
-
-    pieceApp.init();
-    
 })
