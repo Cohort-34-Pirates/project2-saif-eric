@@ -105,6 +105,7 @@ hideChapters();
 function showChapters() {
     chapterGallery.style.display = "block";
     arcMenu.style.display = "block";
+
 }
 
 
