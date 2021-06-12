@@ -4,7 +4,7 @@ pieceApp.getChapters = function(){
     
     let proxiedUrl = `https://onepiececover.com/api/chapters/${pieceApp.currentChapter}`
 
-    const url = new URL('http://proxy.hackeryou.com');
+    const url = new URL('https://proxy.hackeryou.com');
 
     url.search = new URLSearchParams({
         reqUrl: proxiedUrl
