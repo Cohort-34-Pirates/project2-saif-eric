@@ -1,3 +1,10 @@
+// For the arcspage.js, we implemented our pieceApp from script.js but with newer features. To see the comments
+// for pieceApp, please see the script.js file
+
+// Arcspage.js will display the arcs list, and allow the user to select an arc and begin viewing the chapter
+// at the start of the arc. Once selected, a scrollable menu will appear, allowing the user to cycle through
+// different arcs easily without heading back to the main Arcs page
+
 const pieceApp = {};
 
 pieceApp.getChapters = function(){
@@ -56,13 +63,14 @@ pieceApp.changeChapter = function() {
     })
 }
 
-
+// Defining the elements used to add functionality for the arcs menu
 const arcMenu = document.querySelector('#arc-menu');
 const arcSelectors = document.querySelector('#arc-selection')
 
 const chapterGallery = document.querySelector('#hide-chapters');
 const boxes = document.querySelector('.arcs-list')
 
+// Defining the elements used to add functionality for the arcs list
 const firstArc = document.querySelector('#arc-1');
 const secondArc = document.querySelector('#arc-2');
 const thirdArc = document.querySelector('#arc-3');
@@ -75,6 +83,7 @@ const ninthArc = document.querySelector('#arc-9');
 const tenthArc = document.querySelector('#arc-10');
 
 
+// The arcSelectors event listener will allow the user to pick an arc from the scrollable menu
 pieceApp.menu = function() {
     arcSelectors.addEventListener("change", function (event) {
         event.preventDefault
@@ -94,19 +103,20 @@ pieceApp.init = function () {
 pieceApp.init();
 
 
-
+// This function will hide the chapter viewing page & and the scrollable menu until an arc is chosen
 function hideChapters() {
     chapterGallery.style.display = "none";
     arcMenu.style.display ="none"
 }
 hideChapters();
 
-
+// This function will display the chapter viewing page & and the scrollable menu when an arc is chosen
 function showChapters() {
     chapterGallery.style.display = "block";
     arcMenu.style.display = "block";
 }
 
+// The corresponding event listeners below will allow the user to select an arc and be taken to its respective chapter
 
 firstArc.addEventListener("click", (event) => {
     event.preventDefault();
