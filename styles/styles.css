@@ -482,6 +482,10 @@ footer {
   width: 55%;
 }
 
+.arcs-body select {
+  width: 270px;
+}
+
 .chapters-carousel {
   height: auto;
   padding-bottom: 80px;
