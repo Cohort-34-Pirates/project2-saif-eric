@@ -1,11 +1,15 @@
+.arcs-list {
+    height: auto;
+    padding-bottom: 80px;
+}
 .arcs-body .body-options{
     display: flex;
         ul {
         display: flex;
         flex-wrap: wrap;
         h2 {
-            font-size: 70px;
-            
+            font-size: 50px;
+            letter-spacing: 1px;
             -webkit-text-stroke: 2px black;
         }
         li {
@@ -16,4 +20,4 @@
         }
     }
 }
-        
+

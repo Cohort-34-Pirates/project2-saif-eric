@@ -314,7 +314,8 @@ nav ul li {
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
 }
-nav ul li:hover {
+nav ul li a:hover {
+  color: yellow;
   border-bottom: 5px solid orange;
   -webkit-box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
           box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
@@ -322,9 +323,6 @@ nav ul li:hover {
 nav ul li a {
   font-size: 50px;
   font-weight: 700;
-  color: #641c1c;
-}
-nav ul li a:visited {
   color: #641c1c;
 }
 
@@ -342,9 +340,12 @@ nav ul li a:visited {
   width: 35%;
 }
 
+body {
+  background-color: #f0ead6;
+}
+
 .body {
   background-image: url(../assets/Wiki-background.jpg);
-  height: 80vh;
 }
 
 h1 {
@@ -384,9 +385,8 @@ audio {
 }
 
 footer {
-  background-color: #f0ead6;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), color-stop(85%, #f0ead6));
-  background-image: linear-gradient(180deg, whitesmoke, #f0ead6 85%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(#9198e5, #ffff));
+  background: linear-gradient(#ffff #9198e5);
   height: 5vh;
 }
 
@@ -428,6 +428,10 @@ footer {
   margin-left: auto;
 }
 
+.index .body {
+  height: 80vh;
+}
+
 .body h1 {
   padding-top: 15px;
 }
@@ -449,6 +453,11 @@ footer {
   padding: 10px 0;
 }
 
+.arcs-list {
+  height: auto;
+  padding-bottom: 80px;
+}
+
 .arcs-body .body-options {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -462,7 +471,8 @@ footer {
       flex-wrap: wrap;
 }
 .arcs-body .body-options ul h2 {
-  font-size: 70px;
+  font-size: 50px;
+  letter-spacing: 1px;
   -webkit-text-stroke: 2px black;
 }
 .arcs-body .body-options ul li {
@@ -470,10 +480,6 @@ footer {
 }
 .arcs-body .body-options ul li img {
   width: 55%;
-}
-
-body {
-  background-color: #f0ead6;
 }
 
 .chapters-carousel {
