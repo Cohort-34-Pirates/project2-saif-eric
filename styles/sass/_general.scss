@@ -57,17 +57,26 @@ header {
         box-shadow: 0 8px 20px 0px rgba(0,0,0,0.125);
         
     }
+    
+    li a:focus {
+        border: 5px solid yellow;
+    }
+
     li a {
         font-size: 50px;
         font-weight: 700;
         color: $title-color;
     }
 }
-.header-logo img {
+.logo-desktop {
     width: 50%;
     position: relative;
     right: 243px;
     height: 15vh;
+}
+
+.mobile-logo {
+    display: none;
 }
 .header-image {
     position: absolute;
@@ -92,7 +101,16 @@ h2 {
 audio {
     position: absolute;
     right: 0;
+    background:burlywood;
+    -webkit-box-shadow: 5px 5px 20px rgba(0,0, 0, 0.4);
+    transition: 0.5s;
+
 }
+
+audio:hover {
+    transform: scale(1.03);
+}
+
 .box-selector {
     text-align: center;
 }
@@ -111,7 +129,7 @@ audio {
 footer {
     // background-color: $eggshell-color;
     background: linear-gradient(#ffff #9198e5);
-    height: 5vh;
+    // height: 5vh;
 }
 .footer-socials {
     display: flex;

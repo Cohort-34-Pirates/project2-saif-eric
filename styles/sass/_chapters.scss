@@ -1,7 +1,7 @@
 // Styling for the chapter carousel
 .chapters-carousel {
     height: auto;
-    padding-bottom: 80px;
+    padding-bottom: 440px;
 }
 
 .chapters-gallery {
@@ -86,26 +86,19 @@
 
 
 // Styling for the scrollable chapters & arcs menu
-.jump-link {
-    text-align: right;
-    position: relative;
-    top: 50px;
-    p {
-        @include h2;
-        font-size: 25px;
-        -webkit-text-stroke: 1.5px black;
-    }
-    img {
-        width: 50px
-    };
-}
 .menu-container {
     background-image: url(../assets/Wiki-background.jpg);
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 select {
     width: 150px;
     font-size: 20px;
+}
+
+select:focus {
+    border: 5px solid yellow;
 }
 .post {
 	text-decoration: none;
@@ -143,4 +136,23 @@ select {
 	font-weight: 700;
 	line-height: 1.333;
 	transition: .4s ease-out;
+}
+
+.jump-link {
+    text-align: right;
+    position: relative;
+    top: 50px;
+    p {
+        @include h2;
+        font-size: 25px;
+        -webkit-text-stroke: 1.5px black;
+    }
+    img {
+        width: 50px;
+        transition: 0.5s;
+    };
+    img:hover {
+        transform: rotate(360deg);
+        width: 65px;
+    }
 }

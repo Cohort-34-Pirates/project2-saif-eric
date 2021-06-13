@@ -320,17 +320,24 @@ nav ul li a:hover {
   -webkit-box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
           box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
 }
+nav ul li a:focus {
+  border: 5px solid yellow;
+}
 nav ul li a {
   font-size: 50px;
   font-weight: 700;
   color: #641c1c;
 }
 
-.header-logo img {
+.logo-desktop {
   width: 50%;
   position: relative;
   right: 243px;
   height: 15vh;
+}
+
+.mobile-logo {
+  display: none;
 }
 
 .header-image {
@@ -366,6 +373,15 @@ h2 {
 audio {
   position: absolute;
   right: 0;
+  background: burlywood;
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+audio:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
 }
 
 .box-selector {
@@ -387,7 +403,6 @@ audio {
 footer {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(#9198e5, #ffff));
   background: linear-gradient(#ffff #9198e5);
-  height: 5vh;
 }
 
 .footer-socials {
@@ -522,7 +537,7 @@ h1 img {
 
 .chapters-carousel {
   height: auto;
-  padding-bottom: 80px;
+  padding-bottom: 440px;
 }
 
 .chapters-gallery {
@@ -613,32 +628,25 @@ h1 img {
   color: #e99d57;
 }
 
-.jump-link {
-  text-align: right;
-  position: relative;
-  top: 50px;
-}
-.jump-link p {
-  font-family: "ONE PIECE", sans-serif;
-  font-size: 85px;
-  color: #f0ead6;
-  letter-spacing: 3px;
-  -webkit-text-stroke: 3px black;
-  font-size: 25px;
-  -webkit-text-stroke: 1.5px black;
-}
-.jump-link img {
-  width: 50px;
-}
-
 .menu-container {
   background-image: url(../assets/Wiki-background.jpg);
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 select {
   width: 150px;
   font-size: 20px;
+}
+
+select:focus {
+  border: 5px solid yellow;
 }
 
 .post {
@@ -901,5 +909,249 @@ select {
   .arcs-body .previous,
 .arcs-body .next {
     width: 230px;
+=====
+.jump-link {
+  text-align: right;
+  position: relative;
+  top: 50px;
+}
+.jump-link p {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 85px;
+  color: #f0ead6;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 3px black;
+  font-size: 25px;
+  -webkit-text-stroke: 1.5px black;
+}
+.jump-link img {
+  width: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.jump-link img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  width: 65px;
+}
+
+@media (max-width: 1920px) {
+  .chapters-body .logo-desktop {
+    width: 500px;
+  }
+  .chapters-body .chapters-gallery img {
+    width: 35%;
+  }
+  .chapters-body .chapter-description {
+    width: 80%;
+  }
+}
+@media (max-width: 1280px) {
+  .chapters-body .logo-desktop {
+    width: 300px;
+    right: 25px;
+  }
+  .chapters-body nav ul li a {
+    font-size: 40px;
+  }
+  .chapters-body .chapters-gallery {
+    width: 60%;
+  }
+  .chapters-body .chapters-gallery img {
+    width: 50%;
+  }
+  .chapters-body .chapter-description {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .chapters-body .logo-desktop {
+    width: 350px;
+    right: 50px;
+  }
+  .chapters-body nav ul li a {
+    font-size: 35px;
+  }
+  .chapters-body .chapters-gallery {
+    width: 100%;
+  }
+  .chapters-body .chapters-gallery img {
+    width: 60%;
+  }
+  .chapters-body .chapter-description {
+    font-size: 25px;
+    padding: 40px;
+  }
+  .chapters-body footer .wrapper {
+    width: 95%;
+  }
+  .chapters-body .jump-link {
+    left: 140px;
+  }
+}
+@media (max-width: 600px) {
+  .chapters-body .logo-desktop {
+    right: 70px;
+  }
+  .chapters-body nav ul {
+    margin-left: -100px;
+  }
+  .chapters-body .chapters-gallery img {
+    width: 70%;
+  }
+  .chapters-body .chapter-title {
+    font-size: 4rem;
+    padding: 20px;
+  }
+  .chapters-body .chapter-description {
+    font-size: 20px;
+  }
+  .chapters-body .chapter-name {
+    font-size: 2.5rem;
+  }
+  .chapters-body .jump-link {
+    left: 0px;
+  }
+  .chapters-body .social-box p {
+    font-size: 20px;
+  }
+  .chapters-body .social-box a {
+    font-size: 35px;
+  }
+}
+@media (max-height: 578px) {
+  .chapters-body .logo-desktop {
+    width: 250px;
+  }
+  .chapters-body .chapters-gallery {
+    width: 80%;
+  }
+  .chapters-body .chapter-description {
+    width: 100%;
+  }
+}
+@media (max-height: 420px) {
+  .chapters-body .logo-desktop {
+    display: none;
+  }
+  .chapters-body .mobile-logo {
+    display: block;
+    width: 10%;
+    right: 55px;
+    position: relative;
+    height: auto;
+  }
+  .chapters-body nav ul {
+    margin-left: -20px;
+  }
+  .chapters-body .chapters-gallery {
+    width: 80%;
+  }
+  .chapters-body .chapter-description {
+    width: 100%;
+  }
+}
+@media (max-height: 375px) {
+  .chapters-body .jump-link p {
+    font-size: 14px;
+  }
+  .chapters-body .chapters-gallery {
+    width: 100%;
+  }
+  .chapters-body .chapter-description {
+    font-size: 15px;
+  }
+}
+@media (max-width: 420px) {
+  .chapters-body .logo-desktop {
+    display: none;
+  }
+  .chapters-body .mobile-logo {
+    display: block;
+    width: 28%;
+    right: 25px;
+    position: relative;
+    height: auto;
+  }
+  .chapters-body nav ul {
+    margin-left: -56px;
+  }
+  .chapters-body .menu-container {
+    padding-bottom: 60px;
+  }
+  .chapters-body .previous,
+.chapters-body .next {
+    width: 250px;
+  }
+  .chapters-body .chapters-gallery img {
+    width: 100%;
+  }
+  .chapters-body .chapter-description {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 20px;
+  }
+  .chapters-body .chapter-title {
+    padding: 15px;
+  }
+  .chapters-body .post-title {
+    font-size: 0.5rem;
+    line-height: 1em;
+  }
+  .chapters-body audio {
+    width: 120px;
+  }
+  .chapters-body select {
+    width: 100px;
+    font-size: 10px;
+  }
+  .chapters-body .footer-socials {
+    text-align: center;
+  }
+  .chapters-body .social-box p {
+    font-size: 15px;
+  }
+  .chapters-body .social-box a {
+    font-size: 30px;
+  }
+}
+@media (max-width: 400px) {
+  .chapters-body .previous,
+.chapters-body .next {
+    width: 100px;
+    font-size: 10px;
+  }
+  .chapters-body .menu-container {
+    padding-bottom: 60px;
+  }
+  .chapters-body .jump-link p {
+    font-size: 15px;
+  }
+  .chapters-body .post-title {
+    font-size: 0.5rem;
+    line-height: 1em;
+  }
+  .chapters-body select {
+    width: 100px;
+    font-size: 10px;
+  }
+  .chapters-body .social-box p {
+    font-size: 15px;
+  }
+  .chapters-body .social-box a {
+    font-size: 20px;
+  }
+  .chapters-body audio {
+    width: 120px;
+  }
+  .chapters-body .chapter-description {
+    line-height: 17px;
+  }
+  .chapters-body .chapter-title {
+    font-size: 3.5rem;
+  }
+  .chapters-body .chapter-name {
+    font-size: 2rem;
   }
 }
