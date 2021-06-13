@@ -40,7 +40,6 @@
     letter-spacing: 1.5px;
     line-height: 25px;
     border-radius: 5%;
- 
 }
 
 .chapter-title {
@@ -87,6 +86,19 @@
 
 
 // Styling for the scrollable chapters & arcs menu
+.jump-link {
+    text-align: right;
+    position: relative;
+    top: 50px;
+    p {
+        @include h2;
+        font-size: 25px;
+        -webkit-text-stroke: 1.5px black;
+    }
+    img {
+        width: 50px
+    };
+}
 .menu-container {
     background-image: url(../assets/Wiki-background.jpg);
     position: relative;

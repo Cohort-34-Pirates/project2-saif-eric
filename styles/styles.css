@@ -584,6 +584,24 @@ footer {
   color: #e99d57;
 }
 
+.jump-link {
+  text-align: right;
+  position: relative;
+  top: 50px;
+}
+.jump-link p {
+  font-family: "ONE PIECE", sans-serif;
+  font-size: 85px;
+  color: #f0ead6;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 3px black;
+  font-size: 25px;
+  -webkit-text-stroke: 1.5px black;
+}
+.jump-link img {
+  width: 50px;
+}
+
 .menu-container {
   background-image: url(../assets/Wiki-background.jpg);
   position: relative;
