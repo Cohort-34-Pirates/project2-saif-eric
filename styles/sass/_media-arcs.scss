@@ -5,115 +5,132 @@
 }
 
 @media(max-width: 1360px) {
-    .arcs-body .chapter-description {
+    .arcs-body {
+        .chapter-description {
         width: 100%;
-    }
-    .arcs-body .body-options ul li {
-        width: 32%;
-        margin-top: 25px;
-    }
-    .arcs-body .body-options h2 {
-        padding: 0;
-    }
-    .arcs-body .chapters-gallery {
-        width: 80%;
+        }
+        .body-options ul li {
+            width: 32%;
+            margin-top: 25px;
+        }
+        .body-options h2 {
+            padding: 0;
+        }
+        .chapters-gallery {
+            width: 80%;
+        }
     }
 }
 
 @media(max-width: 865px) {
-    .arcs-body header img {
-        right: 60px;
-    }
-    .arcs-body nav ul li a {
-        font-size: 35px;
-    }
-    .arcs-body .body-options ul li {
-        width: 50%;
-    }
-    .arcs-body .chapters-gallery {
-        width: 90%;
-        img {
+    .arcs-body {
+        header img {
+            right: 60px;
+        }
+        nav ul li a {
+            font-size: 35px;
+        }
+        .body-options ul li {
             width: 50%;
         }
-    }
-    .arcs-body .chapter-title {
-        font-size: 4rem;
-    }
-    .arcs-body .chapter-name {
-        font-size: 2.5rem;
+        .chapters-gallery {
+            width: 90%;
+            img {
+                width: 50%;
+            }
+        }
+        .chapter-title {
+            font-size: 4rem;
+        }
+        .chapter-name {
+            font-size: 2.5rem;
+        }
     }
 }
+
 @media (max-width: 670px) {
-    .arcs-body .menu-container {
+    .arcs-body {
+        .menu-container {
         display: flex;
         flex-direction: column-reverse;
-    }
-    .arcs-body .jump-link,
-    .arcs-body audio {
+        }
+        .jump-link,
+        audio {
         text-align: left;
         position: relative;
         top: 0;
         left: 5px;
-    }
-    .arcs-body .body-options ul li {
+        }
+        .body-options ul li {
         width: 100%;
+        }
     }
 }
 
 @media(max-width: 530px) {
-    .arcs-body header img {
+    .arcs-body {
+        header img {
         display: none;
-    }
-    .arcs-body .mobile {
-        position: initial;
-        display: block;
-        width: 20%;
-        height: auto;
-    }
-    .arcs-body .header-logo {
-        width: 100%;
-    }
-    .arcs-body nav ul li a{
-        font-size: 30px;
-    }
-    .arcs-body .footer-copyright {
-        padding-top: 20px;
-    }
-    .arcs-body .footer-socials {
-        display: block;
-    }
-    .arcs-body .social-box {
-        width: 51%;
-        p {
-            font-size: 22px;
-            width: 35%;
+        }
+        .mobile {
+            position: initial;
+            display: block;
+            width: 20%;
+            height: auto;
+        }
+        .header-logo {
+            width: 100%;
+        }
+        nav ul li a{
+            font-size: 30px;
+        }
+        .footer-copyright {
+            padding-top: 20px;
+        }
+        .footer-socials {
+            display: block;
+        }
+        social-box {
+            width: 51%;
+            p {
+                font-size: 22px;
+                width: 35%;
+            }
         }
     }
 }
 
 @media (max-width: 420px) {
-    .arcs-body .chapters-gallery {
+    .arcs-body {
+        .chapters-gallery {
         padding: 5px;
-
-    }
-    .arcs-body .chapter-title {
-        padding: 10px 0;
-        font-size: 3.3rem;
-        padding-right: 20px;
-    }
-    .arcs-body .chapter-name {
-        font-size: 1.7rem;
-        padding-right: 35px;
-    }
-    .arcs-body .chapter-description{
-        padding: 5px;
-        margin: 0;
-    }
-    .arcs-body .post {
-        padding: 0;
-    }
-    .arcs-body .previous,
-    .arcs-body .next {
-        width: 230px;
+        }
+        .chapter-title {
+            padding: 10px 0;
+            font-size: 3.3rem;
+            padding-right: 20px;
+        }
+        .chapter-name {
+            font-size: 1.7rem;
+            padding-right: 35px;
+        }
+        .chapter-description{
+            font-size: 15px;
+            padding: 5px;
+            margin: 0;
+        }
+        .post {
+            padding: 0;
+        }
+        .previous,
+        .next {
+            width: 230px;
+        }
+        .post-title {
+        line-height: 1em;       
+        }
+        audio {
+            width: 120px;
+        }
     }
 }
