@@ -1,6 +1,12 @@
 .index .body {
     height: 80vh;
 }
+.index .mobile {
+    display: none;
+}
+h1 img {
+    width: 60px;
+}
 .body h1{
     padding-top: 15px;
 }
@@ -15,5 +21,8 @@
         text-align: center;
         padding: 10px 0;
     } 
+}
+.index .all-socials {
+    display: flex;
 }
 
